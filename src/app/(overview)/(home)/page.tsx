@@ -1,8 +1,9 @@
+import GradientHeading from "@/app/components/GradientHeading";
+import InfoBar from "@/app/components/InfoBar";
+import PreviewComponent from "@/app/components/PreviewComponent";
 import { Metadata } from "next";
 import Link from "next/link";
-import InfoBar from "../components/InfoBar";
-import GradientHeading from "../components/GradientHeading";
-import PreviewComponent from "../components/PreviewComponent";
+
 // import ReactComponentButton from "../components/ReactComponentButton";
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function Home() {
           href="/app"
           className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold"
         >
-          Share JSON
+          Start APP
         </Link>
         {/* <ReactComponentButton /> */}
       </div>

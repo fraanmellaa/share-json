@@ -78,7 +78,7 @@ export const useJsonStore = create<JsonState>((set) => ({
   reset: () =>
     set({
       rawData: "",
-      jsonData: {},
+      jsonData: null,
       uiStyle: {
         font: { family: "Roboto", weight: "400", size: "14px" },
         nullColor: "#ff0000",
