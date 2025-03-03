@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-// import ReactComponentButton from "../components/ReactComponentButton";
-import PreviewComponent from "../components/PreviewComponent";
 import InfoBar from "../components/InfoBar";
 import GradientHeading from "../components/GradientHeading";
+import PreviewComponent from "../components/PreviewComponent";
+// import ReactComponentButton from "../components/ReactComponentButton";
 
 export const metadata: Metadata = {
   title: "JSON Share",

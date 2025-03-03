@@ -77,6 +77,7 @@ export const useJsonStore = create<JsonState>((set) => ({
   setGeneratedLink: (link) => set({ generatedLink: link }),
   reset: () =>
     set({
+      rawData: "",
       jsonData: {},
       uiStyle: {
         font: { family: "Roboto", weight: "400", size: "14px" },
@@ -92,6 +93,9 @@ export const useJsonStore = create<JsonState>((set) => ({
         backgroundColor: "#ff910010",
         containerClass: "bg-transparent min-h-full rounded-md",
       },
+      customizationActivated: false,
       isGenerating: false,
+      isGenerated: false,
+      generatedLink: "",
     }),
 }));

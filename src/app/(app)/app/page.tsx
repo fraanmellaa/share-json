@@ -1,9 +1,9 @@
+import BackdropCard from "@/app/components/BackdropCard";
+import JsonCustomize from "@/app/components/json/components/JsonCustomize";
+import JsonInput from "@/app/components/json/components/JsonInput";
+import JsonSharing from "@/app/components/json/components/JsonSharing";
+import PrettifyButton from "@/app/components/json/components/PrettifyButton";
 import { Metadata } from "next";
-import JsonInput from "../components/json/components/JsonInput";
-import BackdropCard from "../components/BackdropCard";
-import PrettifyButton from "../components/json/components/PrettifyButton";
-import JsonCustomize from "../components/json/components/JsonCustomize";
-import JsonSharing from "../components/json/components/JsonSharing";
 
 export const metadata: Metadata = {
   title: "Create JSON",
