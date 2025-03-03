@@ -10,7 +10,7 @@ export interface JsonDB {
   json_id: string;
   json_data: JsonData;
   ui_style: JsonViewerUI;
-  created_at: string;
+  created_at: Date;
 }
 
 export async function insertJson(

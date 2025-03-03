@@ -10,7 +10,7 @@ export default function Preview({ json }: { json: JsonDB }): JSX.Element {
   const { setJsonData, setUiStyle, setCreatedAt, setLoading } = useViewStore();
   const json_data = json.json_data as Record<string, JsonData> | JsonData[];
   const ui_style = json.ui_style as JsonViewerUI;
-  const created_at = json.created_at as string;
+  const created_at = json.created_at as Date;
 
   useEffect(() => {
     if (json_data && ui_style) {
