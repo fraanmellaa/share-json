@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { roboto } from "./ui/fonts";
 import "./globals.css";
 import Link from "next/link";
+import { Toaster } from "@pheralb/toast";
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased relative`}>
+      <body className={`${roboto.className} antialiased relative dark`}>
         <div className="absolute inset-0 h-full w-full bg-[#0a0a0a] -z-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_50%_-100%,#1a1a1a,transparent)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
@@ -51,6 +52,7 @@ export default function RootLayout({
             </svg>
           </Link>
         </span>
+        <Toaster />
       </body>
     </html>
   );
