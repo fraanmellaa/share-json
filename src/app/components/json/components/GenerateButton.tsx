@@ -1,6 +1,6 @@
 "use client";
 
-import { generateLink } from "../hooks/linkGeneration";
+import { generateLink, isJsonSizeValid } from "../hooks/jsonUtils";
 import { toast } from "@pheralb/toast";
 import { insertJson } from "@/app/lib/queries";
 import { useJsonStore } from "@/app/store/jsonStore";
@@ -25,7 +25,7 @@ export default function GenerateButton() {
       options: {
         promise: startGenerating(),
         success: "Link generated",
-        error: "Something went wrong",
+        error: "Try again",
         autoDismiss: true,
         onSuccess: () => {
           setIsGenerated(true);
@@ -40,6 +40,24 @@ export default function GenerateButton() {
   };
 
   const startGenerating = async () => {
+    if (!jsonData) {
+      toast.error({
+        text: "JsonDataError",
+        description: "No JSON data to generate link.",
+        theme: "dark",
+      });
+      throw new Error("No JSON data to generate link.");
+    }
+    const isValid = isJsonSizeValid(jsonData);
+    if (!isValid) {
+      toast.error({
+        text: "JsonDataError",
+        description: "JSON data size exceeds the limit.",
+        theme: "dark",
+      });
+      throw new Error("JSON data size exceeds the limit.");
+    }
+
     setIsGenerating(true);
     const { url, json_id } = generateLink();
     setGeneratedLink(url);

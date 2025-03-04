@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0F0F0F" />
+
       <body className={`${roboto.className} antialiased relative dark`}>
         <div className="absolute inset-0 h-full w-full bg-[#0a0a0a] -z-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_50%_-100%,#1a1a1a,transparent)]"></div>

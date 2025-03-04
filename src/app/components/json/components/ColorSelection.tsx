@@ -143,9 +143,7 @@ export default function ColorSelection() {
 
   return (
     <div className="flex flex-col items-start space-y-5 mt-5 text-white w-full">
-      <p className="text-white font-bold text-base sm:text-xl">
-        Color Selection
-      </p>
+      <p className="text-white font-bold text-sm sm:text-xl">Color Selection</p>
       <div className="flex items-center space-x-3 w-full">
         <span className="text-white text-sm sm:text-base whitespace-nowrap">
           Key

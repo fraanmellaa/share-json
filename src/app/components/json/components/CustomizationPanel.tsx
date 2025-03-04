@@ -11,7 +11,7 @@ export default function CustomizationPanel() {
   return (
     <div className="sm:px-4 w-full h-full flex flex-col items-start justify-between space-y-4 xl:space-y-0">
       <div className="sm:px-4 w-full h-full">
-        <p className="text-left text-white font-bold text-xl sm:text-3xl">
+        <p className="text-left text-white font-bold text-base sm:text-2xl">
           Customization Panel
         </p>
 

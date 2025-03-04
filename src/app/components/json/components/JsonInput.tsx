@@ -1,4 +1,5 @@
 "use client";
+
 import { useJsonStore } from "@/app/store/jsonStore";
 
 export default function JsonInput() {
@@ -10,7 +11,7 @@ export default function JsonInput() {
     isGenerated,
   } = useJsonStore();
 
-  const mutipleLinesPlaceholder = `Insert your JSON here... 
+  const mutipleLinesPlaceholder = `Insert your JSON here... (Max 0.5MB)
 Ex: {
   "name": "John Doe",
   "age": 30,
