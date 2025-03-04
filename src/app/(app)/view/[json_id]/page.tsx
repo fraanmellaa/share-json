@@ -14,13 +14,11 @@ export default async function View(props: {
   const { json_id } = await props.params;
 
   return (
-    <main className="h-screen w-full">
-      <div className="max-w-[1400px] mx-auto space-y-5 min-h-full w-full grid grid-cols-2 place-items-center">
-        <Suspense fallback={<Skeleton />}>
-          <JsonView json_id={json_id} />
-        </Suspense>
-        <Texts />
-      </div>
+    <main className="max-w-[1400px] mx-auto space-y-5 px-2 py-10 sm:p-10 w-full flex flex-col justify-center items-center lg:flex-row h-screen">
+      <Texts />
+      <Suspense fallback={<Skeleton />}>
+        <JsonView json_id={json_id} />
+      </Suspense>
     </main>
   );
 }

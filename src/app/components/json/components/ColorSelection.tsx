@@ -143,9 +143,13 @@ export default function ColorSelection() {
 
   return (
     <div className="flex flex-col items-start space-y-5 mt-5 text-white w-full">
-      <p className="text-white font-bold text-2xl">Color Selection</p>
+      <p className="text-white font-bold text-base sm:text-xl">
+        Color Selection
+      </p>
       <div className="flex items-center space-x-3 w-full">
-        <span className="text-white whitespace-nowrap">Key</span>
+        <span className="text-white text-sm sm:text-base whitespace-nowrap">
+          Key
+        </span>
         <div className="w-full rounded-full overflow-hidden ">
           <Hue
             defaultValue={hexToHue(keyColor!)}
@@ -156,7 +160,9 @@ export default function ColorSelection() {
         </div>
       </div>
       <div className="flex items-center space-x-3 w-full">
-        <span className="text-white  whitespace-nowrap">String</span>
+        <span className="text-white text-sm sm:text-base whitespace-nowrap">
+          String
+        </span>
         <div className="w-full rounded-full overflow-hidden ">
           <Hue
             defaultValue={hexToHue(stringColor as string)}
@@ -167,7 +173,9 @@ export default function ColorSelection() {
         </div>
       </div>
       <div className="flex items-center space-x-3 w-full">
-        <span className="text-white  whitespace-nowrap">Number</span>
+        <span className="text-white  text-sm sm:text-base whitespace-nowrap">
+          Number
+        </span>
         <div className="w-full rounded-full overflow-hidden ">
           <Hue
             defaultValue={hexToHue(numberColor as string)}
@@ -178,7 +186,9 @@ export default function ColorSelection() {
         </div>
       </div>
       <div className="flex items-center space-x-3 w-full">
-        <span className="text-white  whitespace-nowrap">Boolean</span>
+        <span className="text-white  text-sm sm:text-base whitespace-nowrap">
+          Boolean
+        </span>
         <div className="w-full rounded-full overflow-hidden ">
           <Hue
             defaultValue={hexToHue(booleanColor as string)}
@@ -189,7 +199,9 @@ export default function ColorSelection() {
         </div>
       </div>
       <div className="flex items-center space-x-3 w-full">
-        <span className="text-white  whitespace-nowrap">Null</span>
+        <span className="text-white  text-sm sm:text-base whitespace-nowrap">
+          Null
+        </span>
         <div className="w-full rounded-full overflow-hidden ">
           <Hue
             hue={hexToHue(nullColor!)}
@@ -199,7 +211,9 @@ export default function ColorSelection() {
         </div>
       </div>
       <div className="flex items-center space-x-3 w-full">
-        <span className="text-white  whitespace-nowrap">Background</span>
+        <span className="text-white  text-sm sm:text-base whitespace-nowrap">
+          Background
+        </span>
         <div className="w-full rounded-full overflow-hidden ">
           <Hue
             hue={hexToHue(backgroundColor!)}

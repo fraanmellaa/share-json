@@ -26,7 +26,7 @@ export default function PrettifyButton() {
       type="button"
       disabled={!rawData || isGenerated}
       onClick={handleClick}
-      className={`bg-gradient-to-r from-blue-400/30 to-green-400/30 border-2  border-white/30 text-xl text-white font-bold rounded-md  ${
+      className={`bg-gradient-to-r from-blue-400/30 to-green-400/30 border-2 w-full h-full  border-white/30 text-xl text-white font-bold rounded-md  ${
         !rawData || isGenerated
           ? "opacity-50 cursor-not-allowed"
           : "cursor-pointer hover:from-blue-400/40 hover:to-green-400/40"

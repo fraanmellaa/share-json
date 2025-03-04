@@ -37,7 +37,7 @@ export default function InfoBar({
 
   return (
     <p
-      className={`text-white font-normal flex items-center space-x-1  border-2  px-3 sm:px-5 py-2 rounded-full absolute top-4 ${getColors(
+      className={`text-white font-normal flex items-center space-x-1  border-2  px-3 sm:px-5 py-2 rounded-full  ${getColors(
         type
       )}`}
     >

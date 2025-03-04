@@ -77,7 +77,7 @@ export default function FontSelection() {
   return (
     <div className="w-full flex flex-col items-start space-y-2">
       <div className="flex items-center w-full justify-between space-x-2">
-        <p className=" text-left text-xl font-semibold">Fonts</p>
+        <p className=" text-left text-base sm:text-xl font-semibold">Fonts</p>
         <button
           onClick={handleChangeMultifont}
           className="flex items-center space-x-1.5 cursor-pointer"
@@ -89,7 +89,7 @@ export default function FontSelection() {
                 : "bg-white/30"
             }`}
           ></div>
-          <p className="text-base font-normal">Multifont</p>
+          <p className="text-sm sm:text-base font-normal">Multifont</p>
         </button>
       </div>
 

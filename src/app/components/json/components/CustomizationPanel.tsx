@@ -9,9 +9,9 @@ export default function CustomizationPanel() {
   const { customizationActivated, isGenerating, isGenerated } = useJsonStore();
 
   return (
-    <div className="p-4 w-full h-full flex flex-col items-start justify-between">
-      <div className="p-4 w-full h-full">
-        <p className="text-left text-white font-bold text-3xl">
+    <div className="sm:px-4 w-full h-full flex flex-col items-start justify-between space-y-4 xl:space-y-0">
+      <div className="sm:px-4 w-full h-full">
+        <p className="text-left text-white font-bold text-xl sm:text-3xl">
           Customization Panel
         </p>
 
@@ -25,7 +25,7 @@ export default function CustomizationPanel() {
             <FontSelection />
             <ColorSelection />
           </div>
-          <div className="relative w-full">
+          <div className="relative mt-4 w-fit mx-auto xl:w-full">
             <InfoBar
               type="warning"
               text="Alpha version! More customization options soon."
@@ -33,7 +33,7 @@ export default function CustomizationPanel() {
           </div>
         </div>
       </div>
-      <div className="relative w-full mb-3   p-4">
+      <div className="relative w-fit mx-auto xl:w-full">
         <InfoBar
           type="info"
           text="JSON will be removed after TWO DAYS after creation."

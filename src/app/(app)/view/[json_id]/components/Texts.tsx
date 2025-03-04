@@ -49,9 +49,9 @@ export default function Texts() {
   }, 1000);
 
   return (
-    <div className="flex flex-col w-full items-center justify-center space-y-5">
+    <div className="flex flex-col w-full items-center justify-center space-y-2 sm:space-y-5">
       <GradientHeading>Shared JSON Preview</GradientHeading>
-      <div className="flex items-center justify-between space-x-1">
+      <div className="flex flex-col sm:flex-row items-center justify-between space-x-1">
         <p>This JSON was generated at</p>
         {!created_at && loading ? (
           <div className="w-[160px] h-[20px] animate-pulse bg-gray-300/30 rounded-md"></div>
@@ -68,7 +68,7 @@ export default function Texts() {
           </span>
         )}
       </div>
-      <div className="flex items-center justify-center space-x-1 text-red-500">
+      <div className="flex flex-col sm:flex-row items-center justify-center space-x-1 text-red-500">
         <p>Will be removed on</p>
         {!countdown ? (
           <div className="w-[160px] h-[20px] animate-pulse bg-gray-300/30 rounded-md"></div>

@@ -13,10 +13,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="w-full h-screen overflow-hidden flex flex-col space-y-4 items-center justify-center max-w-[700px] mx-auto relative px-4 md:px-0">
-      <InfoBar
-        type="warning"
-        text="React Component Documentation will be launched soon. Stay tuned!"
-      />
+      <div className="absolute top-4">
+        <InfoBar
+          type="warning"
+          text="React Component Documentation will be launched soon. Stay tuned!"
+        />
+      </div>
       <GradientHeading>
         Share JSON <span className="block">in a BEAUTIFUL WAY</span>
       </GradientHeading>

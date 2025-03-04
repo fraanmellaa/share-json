@@ -30,7 +30,7 @@ Ex: {
   return (
     <textarea
       disabled={isGenerating || isGenerated}
-      className={`w-full h-full resize-none outline-none border-none p-4 text-white font-semibold ${
+      className={`w-full h-[300px] xl:h-full resize-none outline-none border-none p-4 text-white font-semibold scrollbar ${
         (isGenerating || isGenerated) && "opacity-30 cursor-not-allowed"
       }`}
       placeholder={mutipleLinesPlaceholder}

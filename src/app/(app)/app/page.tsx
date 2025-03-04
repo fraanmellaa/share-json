@@ -11,19 +11,24 @@ export const metadata: Metadata = {
 
 export default function App() {
   return (
-    <main className="w-full h-screen overflow-hidden flex flex-col space-y-4 items-center justify-start mx-auto px-10 pb-10 py-5">
-      <div className="w-full max-h-full flex flex-col space-y-4 items-center justify-start">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 w-full max-h-full ">
+    <main className="w-full h-full flex flex-col space-y-4 items-center justify-start mx-auto px-10 pt-5 pb-24 sm:pb-0">
+      <div className="w-full h-full flex flex-col space-y-4 items-center justify-start">
+        <div className="grid grid-cols-1 xl:grid-cols-[1fr_2fr] gap-4 w-full h-full ">
           <BackdropCard>
             <JsonInput />
           </BackdropCard>
+          <div className="xl:hidden w-full min-h-[50px] sm:min-h-[90px]">
+            <PrettifyButton />
+          </div>
           <BackdropCard>
             <JsonCustomize />
           </BackdropCard>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 w-full h-[100px]">
-          <PrettifyButton />
-          <BackdropCard>
+        <div className="grid grid-cols-1 xl:grid-cols-[1fr_2fr] gap-4 w-full h-[100px]">
+          <div className="hidden xl:block w-full h-full">
+            <PrettifyButton />
+          </div>
+          <BackdropCard className="w-full">
             <JsonSharing />
           </BackdropCard>
         </div>

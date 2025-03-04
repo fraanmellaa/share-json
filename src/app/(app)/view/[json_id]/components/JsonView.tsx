@@ -10,8 +10,8 @@ export default async function JsonView({ json_id }: { json_id: string }) {
   }
 
   return (
-    <div className="w-full h-full max-h-[750px] overflow-hidden relative">
-      <div className="w-full h-full overflow-y-auto scrollbar">
+    <div className="w-full sm:max-h-[750px] h-full overflow-hidden relative">
+      <div className="w-full max-h-[350px] sm:h-full sm:max-h-full overflow-y-auto scrollbar">
         <Preview json={json} />
       </div>
     </div>
