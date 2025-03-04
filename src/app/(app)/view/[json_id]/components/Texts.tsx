@@ -8,6 +8,7 @@ import { useState } from "react";
 export default function Texts() {
   const { jsonData, created_at, loading } = useViewStore();
   const [countdown, setCountdown] = useState<string>("");
+  const [text, setText] = useState<string>("Will be removed on");
 
   const handleCopyJson = () => {
     try {
@@ -37,6 +38,11 @@ export default function Texts() {
     const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
     const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
     const seconds = Math.floor((diff % (60 * 1000)) / 1000);
+    if (diff <= 0) {
+      setText("Will be removed today at 00:00");
+      setCountdown("EXPIRED");
+      return;
+    }
     setCountdown(
       `${days}d ${hours}h ${minutes.toString().padStart(2, "0")}m ${seconds
         .toString()
@@ -68,12 +74,15 @@ export default function Texts() {
           </span>
         )}
       </div>
+
       <div className="flex flex-col sm:flex-row items-center justify-center space-x-1 text-red-500">
-        <p>Will be removed on</p>
+        <p>{text}</p>
         {!countdown ? (
           <div className="w-[160px] h-[20px] animate-pulse bg-gray-300/30 rounded-md"></div>
-        ) : (
+        ) : countdown && countdown !== "EXPIRED" ? (
           <span>{countdown}</span>
+        ) : (
+          ""
         )}
       </div>
       <button
