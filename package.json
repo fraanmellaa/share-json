@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@pheralb/toast": "^1.0.0",
+    "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-select": "^2.1.6",
     "@tailwindcss/postcss": "^4.0.9",
     "@uiw/react-color-hue": "^2.4.1",
