@@ -1,0 +1,211 @@
+## `container`
+
+You can change the backgroundCOlor and container classes:
+
+```jsx
+<JsonViewer
+  ...
+  ui={{
+    backgroundColor: "#f5f5f5",
+    containerClass: "border border-gray-300 rounded-lg shadow-md"
+  }}
+/>
+```
+
+## `font / fonts`
+
+By default, the font of the JsonViewer is roboto.
+
+You can change this value using the `font` property:
+
+```jsx
+<JsonViewer
+  ...
+  ui={{
+    font: {
+      family: "Arial",
+      size: "14px",
+      weight: "400",
+    }
+  }}
+/>
+```
+
+Or you can change individual fonts for key and value:
+
+```jsx
+<JsonViewer
+  ...
+  ui={{
+    font: {
+      key: {
+        family: "Poppins",
+        size: "14px",
+        weight: "400",
+      },
+      value: {
+        family: "Roboto",
+        size: "14px",
+        weight: "400",
+      }
+    }
+  }}
+/>
+```
+
+## `colors`
+
+In this case you have customization for:
+
+- `key`
+- `value types` (string, number, boolean)
+- `null`
+- `keyClass``
+- `valueClass`
+
+```jsx
+<JsonViewer
+  ...
+  ui={{
+    keyColor: "#ff0000",
+    valueColor: {
+      string: "#44fcc2",
+      number: "#84d6f7",
+      boolean: "#4caf50",
+    },
+    nullColor: "#f44336",
+    keyClass: "font-bold",
+    valueClass: "font-light",
+  }}
+/>
+```
+
+## Examples
+
+You can use this examples to customize the JsonViewer and not start from scratch:
+
+Preview:
+
+<JsonViewer
+  data={{
+    name: "John Doe",
+    age: 30,
+    email: "test@test.com",
+    address: {
+      street: "123 Main St",
+      city: "Springfield",
+      state: "IL",
+      zip: "62701",
+    },
+  }}
+  ui={{
+    font: { family: "Roboto", weight: "400", size: "14px" },
+    nullColor: "#ff0000",
+    valueColor: {
+      string: "#00c951",
+      number: "#2b7fff",
+      boolean: "#2b7fff",
+    },
+    keyColor: "#2b7fff",
+    keyClass: "font-normal",
+    valueClass: "font-normal",
+    backgroundColor: "#ff910010",
+    containerClass: "bg-transparent max-h-[19 0px] overflow-y-auto rounded-md",
+  }}
+/>
+
+Code:
+
+```tsx
+<JsonViewer
+  data={{
+    name: "John Doe",
+    age: 30,
+    email: "test@test.com",
+    address: {
+      street: "123 Main St",
+      city: "Springfield",
+      state: "IL",
+      zip: "62701",
+    },
+  }}
+  ui={{
+    font: { family: "Roboto", weight: "400", size: "14px" },
+    nullColor: "#ff0000",
+    valueColor: {
+      string: "#00c951",
+      number: "#2b7fff",
+      boolean: "#2b7fff",
+    },
+    keyColor: "#2b7fff",
+    keyClass: "font-normal",
+    valueClass: "font-normal",
+    backgroundColor: "#ff910010",
+    containerClass: "bg-transparent max-h-[19 0px] overflow-y-auto rounded-md",
+  }}
+/>
+```
+
+---
+
+Preview:
+
+<JsonViewer
+  data={{
+    name: "John Doe",
+    age: 30,
+    email: "test@test.com",
+    address: {
+      street: "123 Main St",
+      city: "Springfield",
+      state: "IL",
+      zip: "62701",
+    },
+  }}
+  ui={{
+    font: { family: "Poppins", weight: "400", size: "14px" },
+    nullColor: "#2b7fff",
+    valueColor: {
+      string: "#00c951",
+      number: "#f33f",
+      boolean: "#ff0",
+    },
+    keyColor: "#2b7fff",
+    keyClass: "font-bold",
+    valueClass: "font-normal",
+    backgroundColor: "#0f0f0f70",
+    containerClass: "bg-transparent max-h-[190px] overflow-y-auto rounded-md",
+  }}
+/>
+
+Code:
+
+```tsx
+<JsonViewer
+  data={{
+    name: "John Doe",
+    age: 30,
+    email: "test@test.com",
+    address: {
+      street: "123 Main St",
+      city: "Springfield",
+      state: "IL",
+      zip: "62701",
+    },
+  }}
+  ui={{
+    font: { family: "Roboto", weight: "400", size: "14px" },
+    nullColor: "#ff0000",
+    valueColor: {
+      string: "#00c951",
+      number: "#2b7fff",
+      boolean: "#2b7fff",
+    },
+    keyColor: "#2b7fff",
+    keyClass: "font-normal",
+    valueClass: "font-normal",
+    backgroundColor: "#ff910010",
+    containerClass: "bg-transparent max-h-[19 0px] overflow-y-auto rounded-md",
+  }}
+/>
+```

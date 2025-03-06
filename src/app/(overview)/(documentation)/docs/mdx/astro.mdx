@@ -1,0 +1,95 @@
+## Create a new Astro project
+
+1. Run the following command:
+
+```bash
+npm create astro@latest
+```
+
+2. Select the default options:
+
+```bash
+ astro   Launch sequence initiated.
+
+   dir   Where should we create your new project?
+         ./astro-project
+
+  tmpl   How would you like to start your new project?
+         Include sample files
+
+    ts   Do you plan to write TypeScript?
+         Yes
+
+   use   How strict should TypeScript be?
+         Strict
+
+  deps   Install dependencies?
+         Yes
+
+   git   Initialize a new git repository?
+         Yes
+
+      ✔  Project initialized!
+         ■ Template copied
+         ■ TypeScript customized
+         ■ Dependencies installed
+         ■ Git initialized
+```
+
+3. Add [**@astrojs/react**](https://docs.astro.build/es/guides/integrations-guide/react/) integration:
+
+```bash
+npx astro add react
+```
+
+## Add the library
+
+1. Run the following command:
+
+<InstallLibrary />
+
+2. Add the JsonViewer to the page file:
+
+> 💡 Add [`client:load`](https://docs.astro.build/es/reference/directives-reference/#clientload) directive to the `JsonViewer` component.
+
+```js {5,10}
+// 📄 pages/index.astro
+
+---
+
+import { JsonViewer } from '@franmella/json-viewer';
+
+---
+
+<main>
+    <JsonViewer client:load />
+</main>
+```
+
+3. Pass the JSON data to the `JsonViewer` component:
+
+```js {5,7-17, 21}
+// 📄 pages/index.astro
+
+---
+
+import { JsonViewer } from '@franmella/json-viewer';
+
+const json = {
+  name: 'John Doe',
+  age: 30,
+  email: "test@test.com",
+  address: {
+    street: '123 Main St',
+    city: 'New York',
+    state: 'NY',
+    zip: '10001'
+  }
+}
+
+---
+
+<main>
+    <JsonViewer client:load data={json} />
+</main>
+```

@@ -7,6 +7,7 @@
 body {
   background-color: #0f0f0f;
   min-height: 100vh;
+  height: 100%;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -109,6 +110,7 @@ body {
 }
 
 @theme inline {
+  --breakpoint-xs: 375px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -151,7 +153,39 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-padding-top: 116px;
+  }
   body {
     @apply bg-background text-foreground;
   }
+
+  [data-highlighted-line] {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -16px;
+      right: -16px;
+      bottom: 0;
+      background-color: theme("colors.white / 8%");
+      border-left: 1px solid theme("colors.white");
+      z-index: -1;
+    }
+
+    .dark &::before {
+      background-color: theme("colors.white / 8%");
+      border-left: 1px solid theme("colors.white");
+    }
+  }
+}
+
+html code[data-theme*=" "],
+html code[data-theme*=" "] span,
+html .shiki,
+html .shiki span {
+  background-color: transparent !important;
 }

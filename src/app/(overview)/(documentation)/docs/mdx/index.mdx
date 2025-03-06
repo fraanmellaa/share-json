@@ -1,0 +1,51 @@
+## Framework guides
+
+<FrameworkGuidesComponent />
+
+## Getting Started
+
+1. Install the library:
+
+<InstallLibrary />
+
+2. Add the component:
+
+```jsx {3,8}
+// 📃 app.jsx
+
+import { JsonViewer } from "@franmella/json-viewer";
+
+export default function App() {
+  return (
+    <div>
+      <JsonViewer />
+    </div>
+  );
+}
+```
+
+3. Usage:
+
+```jsx {3, 6-14, 17-18}
+// 📃 app.jsx
+
+import { JsonViewer } from "@franmella/json-viewer";
+
+export default function App() {
+  const json = {
+    name: "John Doe",
+    age: 30,
+    cars: [
+      { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+      { name: "BMW", models: ["320", "X3", "X5"] },
+      { name: "Fiat", models: ["500", "Panda"] },
+    ],
+  };
+
+  return (
+    <div>
+      <JsonViewer data={json} />
+    </div>
+  );
+}
+```
