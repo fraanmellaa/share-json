@@ -183,8 +183,8 @@ body {
   }
 }
 
-html code[data-theme*=" "],
-html code[data-theme*=" "] span,
+html code[data-theme],
+html code[data-theme] span,
 html .shiki,
 html .shiki span {
   background-color: transparent !important;

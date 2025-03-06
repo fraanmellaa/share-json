@@ -22,6 +22,22 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#171717" />
+        <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/manifest.webmanifest" />
+        <meta name="og:type" content="website" />
+        <meta
+          name="og:site_name"
+          content="JSON Share | Share JSON data with beautiful designs and customizations"
+        />
+        <meta name="og:image" content="/favicon/favicon.png" />
+        <meta name="og:image:width" content="512" />
+        <meta name="og:image:height" content="512" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@franmella" />
+        <meta name="twitter:image" content="/favicon/favicon.png" />
+        <meta name="twitter:image:width" content="512" />
       </head>
 
       <body className={`${roboto.className} antialiased relative dark`}>
