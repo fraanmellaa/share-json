@@ -1,6 +1,6 @@
 import { JsonData } from "@/app/store/jsonStore";
 
-const MAX_MB_JSON_SIZE = 0.5;
+const MAX_MB_JSON_SIZE = 5;
 
 export const generateLink = () => {
   const randomString =
