@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#171717" />
         <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
@@ -39,6 +40,8 @@ export default function RootLayout({
         <meta name="twitter:site" content="@franmella" />
         <meta name="twitter:image" content="/favicon/favicon.png" />
         <meta name="twitter:image:width" content="512" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://sharejson.franmella.dev" />
       </head>
 
       <body className={`${roboto.className} antialiased relative dark`}>
