@@ -17,6 +17,7 @@
     "@react-symbols/icons": "^1.2.8",
     "@tailwindcss/postcss": "^4.0.9",
     "@uiw/react-color-hue": "^2.4.1",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fumadocs-core": "^14.7.7",

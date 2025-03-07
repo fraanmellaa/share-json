@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { roboto } from "./ui/fonts";
 import "./globals.css";
 import { Toaster } from "@pheralb/toast";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -48,6 +49,7 @@ export default function RootLayout({
 
         {children}
 
+        <Analytics />
         <Toaster />
       </body>
     </html>
